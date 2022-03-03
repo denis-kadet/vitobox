@@ -78,15 +78,15 @@ function copyfonts() {
 }
 //, "!app../images/icons"
 function copyimg() {
-    return src(["./app../images/**/*"]).pipe(dest("./dist../images/"))
+    return src(["./app/images/**/*"]).pipe(dest("./dist/images/"))
 }
 
 
 const libs = [
     './node_modules/jquery/dist/jquery.js',
-    './node_modules/jquery-migrate/dist/jquery-migrate.min.js',
+    // './node_modules/jquery-migrate/dist/jquery-migrate.min.js',
     './node_modules/slick-slider/slick/slick.min.js',
-    './node_modules/accordionjs/accordion.min.js',
+    // './node_modules/accordionjs/accordion.min.js',
     './app/js/main.js',
 ]
 
