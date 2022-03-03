@@ -19,18 +19,18 @@
     }
 }
 
-@media(max-width:576px) {
+@media(max-width: 576px) {
     .block-2 {
         &__picture {
             width: 327px;
             height: 327px;
         }
         &__title {
-            width: 330px;
+            max-width: 330px;
             text-align: center;
         }
         &__text {
-            width: 330px;
+            max-width: 330px;
             text-align: center;
         }
         &__desc-wrap {
