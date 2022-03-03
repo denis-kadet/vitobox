@@ -5,3 +5,42 @@
     margin-top: 120px;
     margin-bottom: 80px;
 }
+
+@media(max-width:768px) {
+    .block-2 {
+        &__title {
+            margin-bottom: 10px;
+        }
+        margin-top: 60px;
+        margin-bottom: 40px;
+        &__picture {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .block-2 {
+        &__picture {
+            width: 327px;
+            height: 327px;
+        }
+        &__title {
+            width: 330px;
+            text-align: center;
+        }
+        &__text {
+            width: 330px;
+            text-align: center;
+        }
+        &__desc-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .text-center {
+        text-align: center;
+    }
+}
