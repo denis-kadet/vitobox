@@ -1,0 +1,7 @@
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .block-9__item-img_1::before,
+    .block-9__item-img_4::before {
+        content: none !important;
+    }
+}
