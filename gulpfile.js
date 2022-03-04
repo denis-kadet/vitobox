@@ -22,6 +22,7 @@ const cleanCSS = require('gulp-clean-css');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
 const gulpif = require('gulp-if');
+const webp = require('gulp-webp');
 
 const env = process.env.NODE_ENV;
 
@@ -53,7 +54,7 @@ function styles() {
         .pipe(postcss([autoprefixer({
             grid: "autoplace"
         })])) //options: https://www.npmjs.com/package/autoprefixer#prefixes
-        .pipe(gulpif(env === "prod", gcmq()))
+        .pipe(gulpif(env === "dev", gcmq()))
         .pipe(gulpif(env === "prod", cleanCSS()))
         .pipe(gulpif(env === "dev", sourcemaps.write()))
         .pipe(dest("./app/css"));
@@ -121,10 +122,18 @@ function script() {
 //         .pipe(dest('./dist../images/icons'));
 // }
 
+
+function imagesWebp() {
+    return src('./app/images/*.{jpg,png}')
+        .pipe(webp())
+        .pipe(dest('./dist/images/'));
+}
+
 function stream() {
     watch(["./app/**/*.scss"], series(styles, copycss, copyhtml)).on("change", browserSync.reload);;
     watch(["./app/*.html"], copyhtml).on("change", browserSync.reload);
     watch(['./app/js/*.js'], script).on("change", browserSync.reload);
+    watch(['./app/images/*'], script).on("change", browserSync.reload);
     // watch(['./app../images/icons/*.svg'], icon).on("change", browserSync.reload);
 }
 
@@ -148,7 +157,8 @@ exports.script = script;
 // exports.icon = icon;
 exports.copyfonts = copyfonts;
 exports.copyimg = copyimg;
+exports.imagesWebp = imagesWebp;
 
 
-exports.default = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg, /*icon,*/ parallel(stream, server));
-exports.build = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg /*icon,*/ );
+exports.default = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg, /*icon,*/ imagesWebp, parallel(stream, server));
+exports.build = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg /*icon,*/ , imagesWebp);
