@@ -23,6 +23,9 @@
     &__wrap {
         margin-top: 80px;
     }
+    &__desc-backround {
+        display: none;
+    }
 }
 
 .desc-number {
@@ -35,7 +38,7 @@
     }
     &__wrap {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
 
@@ -101,16 +104,29 @@
                 margin-bottom: 40px;
             }
         }
+        &__desc-backround {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            //background: url('./images/block-1-mob-motion.png') left center/cover no-repeat transparent;
+            background: url('./images/block-1-mob-motion.webp') left center/cover no-repeat transparent;
+            filter: blur(20px);
+            transform: translateX(-14px);
+            z-index: -1;
+        }
     }
     .text-center {
         text-align: center;
     }
     .desc-number {
         &__wrap {
+            position: relative;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 107px -114px 103px -15px #f5e9c6;
         }
         &__count {
             font-size: 28px;
