@@ -1,0 +1,13 @@
+.block-5 {
+    margin-top: 100px;
+    margin-bottom: 120px;
+    &__title {
+        text-align: center;
+    }
+}
+
+.block-5__text {
+    &-1 {
+        font-weight: bold;
+    }
+}

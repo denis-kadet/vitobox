@@ -3264,7 +3264,7 @@
     right: 0;
     left: 0;
     background: url("./images/block-1-mob-motion.webp") left center/cover no-repeat transparent;
-    filter: blur(20px);
+    filter: blur(200px);
     transform: translateX(-14px);
     z-index: -1; }
   .text-center {
@@ -3358,3 +3358,12 @@
   .block-4__text {
     max-width: 330px;
     text-align: center; } }
+
+.block-5 {
+  margin-top: 100px;
+  margin-bottom: 120px; }
+  .block-5__title {
+    text-align: center; }
+
+.block-5__text-1 {
+  font-weight: bold; }
