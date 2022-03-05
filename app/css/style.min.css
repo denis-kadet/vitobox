@@ -3150,6 +3150,10 @@
 .block__img {
   max-width: 100%; }
 
+.block__link {
+  text-decoration: none;
+  color: #fff; }
+
 @media (max-width: 576px) {
   .block__title {
     font-size: 22px; }
@@ -3291,13 +3295,48 @@
     font-weight: bold;
     text-align: center; }
   .block-3__wrap {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 280px; }
+    .block-3__wrap-arrow::before {
+      content: '';
+      position: absolute;
+      top: 120px;
+      right: -150px;
+      width: 91px;
+      height: 8px;
+      background: url("./images/icons/block-3-line.svg"); }
   .block-3__text-small {
     text-align: center; }
   .block-3__inner {
     display: flex;
     justify-content: center; }
+
+@media (max-width: 1399.99px) {
+  .block-3__wrap-arrow::before {
+    top: 120px;
+    right: -100px; } }
+
+@media (max-width: 1199.99px) {
+  .block-3__wrap-arrow::before {
+    content: none; } }
+
+@media (max-width: 767.99px) {
+  .block-3 {
+    margin-bottom: 80px; }
+    .block-3__title {
+      margin-bottom: 30px; }
+    .block-3__img {
+      margin-bottom: 20px; }
+    .block-3__text {
+      margin-bottom: 10px; }
+    .block-3__wrap-arrow {
+      margin-bottom: 50px; } }
+
+.block-4 {
+  background-color: #4281A4; }
+  .block-4__text {
+    color: #fff; }

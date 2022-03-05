@@ -79,7 +79,7 @@ function copyfonts() {
 }
 //, "!app../images/icons"
 function copyimg() {
-    return src(["./app/images/**/*"]).pipe(dest("./dist/images/"))
+    return src(["./app/images/icons/*"]).pipe(dest("./dist/images/icons"))
 }
 
 
@@ -87,7 +87,7 @@ const libs = [
     './node_modules/jquery/dist/jquery.js',
     // './node_modules/jquery-migrate/dist/jquery-migrate.min.js',
     './node_modules/slick-slider/slick/slick.min.js',
-    // './node_modules/accordionjs/accordion.min.js',
+    './node_modules/accordionjs/accordion.min.js',
     './app/js/main.js',
 ]
 
@@ -134,7 +134,7 @@ function stream() {
     watch(["./app/*.html"], copyhtml).on("change", browserSync.reload);
     watch(['./app/js/*.js'], script).on("change", browserSync.reload);
     watch(['./app/images/*'], script).on("change", browserSync.reload);
-    // watch(['./app../images/icons/*.svg'], icon).on("change", browserSync.reload);
+    watch(['./app../images/icons/*.svg'], copyimg).on("change", browserSync.reload);
 }
 
 function server() {

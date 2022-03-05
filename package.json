@@ -36,6 +36,7 @@
         "prettier": "2.4.1"
     },
     "dependencies": {
+        "accordionjs": "^2.1.2",
         "bootstrap": "^5.0.2",
         "gulp-sass": "^5.0.0",
         "jquery": "^3.6.0",

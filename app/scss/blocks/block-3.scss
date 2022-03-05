@@ -15,11 +15,21 @@
         text-align: center;
     }
     &__wrap {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 280px;
+        &-arrow::before {
+            content: '';
+            position: absolute;
+            top: 120px;
+            right: -150px;
+            width: 91px;
+            height: 8px;
+            background: url('./images/icons/block-3-line.svg');
+        }
     }
     &__text-small {
         text-align: center;
@@ -27,5 +37,44 @@
     &__inner {
         display: flex;
         justify-content: center;
+    }
+}
+
+@media (max-width:1399.99px) {
+    .block-3 {
+        &__wrap {
+            &-arrow::before {
+                top: 120px;
+                right: -100px;
+            }
+        }
+    }
+}
+
+@media (max-width:1199.99px) {
+    .block-3 {
+        &__wrap {
+            &-arrow::before {
+                content: none;
+            }
+        }
+    }
+}
+
+@media (max-width:767.99px) {
+    .block-3 {
+        margin-bottom: 80px;
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__img {
+            margin-bottom: 20px;
+        }
+        &__text {
+            margin-bottom: 10px;
+        }
+        &__wrap-arrow {
+            margin-bottom: 50px;
+        }
     }
 }
