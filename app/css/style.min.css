@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'Stay Dreaming';
+  src: url("./fonts/Stay Dreaming Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
   font-family: 'PP Pangram Sans Slim Medium Reclined';
   src: url("./fonts/PPPangramSans-SlimMediumReclined.woff2") format("woff2"), url("./fonts/PPPangramSans-SlimMediumReclined.woff") format("woff"), url("./fonts/PPPangramSans-SlimMediumReclined.ttf") format("truetype");
   font-weight: 500;
@@ -3150,6 +3157,9 @@
 .block__img {
   max-width: 100%; }
 
+.block-5__item {
+  list-style: none; }
+
 @media (max-width: 576px) {
   .block__title {
     font-size: 22px; }
@@ -3364,6 +3374,65 @@
   margin-bottom: 120px; }
   .block-5__title {
     text-align: center; }
+  .block-5__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 340px;
+    border-bottom: 1px solid #2C1E2F; }
+  .block-5__items {
+    margin: 0;
+    padding: 0; }
+  .block-5__img {
+    max-width: 100%; }
 
 .block-5__text-1 {
   font-weight: bold; }
+
+.block-5__text-2 {
+  margin: 10px 0;
+  font-family: 'Stay Dreaming';
+  font-size: 56px;
+  line-height: 120%;
+  color: #1C131E; }
+
+.block-5__text-3 {
+  margin-bottom: 10px;
+  color: #BDBDBD; }
+
+.block-5__text-4 {
+  margin-bottom: 20px;
+  max-width: 400px;
+  font-size: 18px; }
+
+.block-5__item {
+  margin-top: 10px;
+  line-height: 55px; }
+  .block-5__item-1 {
+    font-family: 'PP Pangram Sans';
+    font-weight: 500;
+    font-size: 18px; }
+  .block-5__item-2 {
+    max-width: 180px;
+    font-size: 18px; }
+
+.block-5__slider-wrap {
+  margin-top: 40px; }
+
+.block-5__img-wrap {
+  position: relative; }
+
+.block-5__img-user {
+  position: absolute;
+  top: -91px;
+  right: 21px; }
+
+@media (max-width: 1399.99px) {
+  .block-5__img-user {
+    top: -91px;
+    right: -88px; } }
+
+@media (max-width: 1199.99px) {
+  .block-5__img-user {
+    top: unset;
+    bottom: -88px; } }

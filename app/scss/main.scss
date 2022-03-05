@@ -39,6 +39,10 @@
     max-width: 100%;
 }
 
+%block__items {
+    list-style: none;
+}
+
 @media(max-width:576px) {
     .block {
         &__title {

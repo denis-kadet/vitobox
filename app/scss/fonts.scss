@@ -1,4 +1,12 @@
 @font-face {
+    font-family: 'Stay Dreaming';
+    src: url('./fonts/Stay Dreaming Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'PP Pangram Sans Slim Medium Reclined';
     src: url('./fonts/PPPangramSans-SlimMediumReclined.woff2') format('woff2'), url('./fonts/PPPangramSans-SlimMediumReclined.woff') format('woff'), url('./fonts/PPPangramSans-SlimMediumReclined.ttf') format('truetype');
     font-weight: 500;
