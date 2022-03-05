@@ -39,11 +39,6 @@
     max-width: 100%;
 }
 
-.block__link {
-    text-decoration: none;
-    color: #fff;
-}
-
 @media(max-width:576px) {
     .block {
         &__title {

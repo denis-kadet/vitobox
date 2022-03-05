@@ -3150,10 +3150,6 @@
 .block__img {
   max-width: 100%; }
 
-.block__link {
-  text-decoration: none;
-  color: #fff; }
-
 @media (max-width: 576px) {
   .block__title {
     font-size: 22px; }
@@ -3340,3 +3336,25 @@
   background-color: #4281A4; }
   .block-4__text {
     color: #fff; }
+  .block-4__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; }
+  .block-4__link {
+    color: #fff; }
+
+@media (max-width: 767.99px) {
+  .block-4__wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    height: 160px; }
+  .block-4__text:first-child {
+    margin-bottom: 20px; } }
+
+@media (max-width: 576.99px) {
+  .block-4__text {
+    max-width: 330px;
+    text-align: center; } }
