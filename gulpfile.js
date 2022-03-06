@@ -39,7 +39,7 @@ const files = [
     './node_modules/bootstrap/dist/css/bootstrap-grid.min.css',
     // './node_modules/accordionjs/accordion.css',
     "./node_modules/slick-slider/slick/slick.css",
-    // "./node_modules/slick-slider/slick/slick-theme.css",
+    "./node_modules/slick-slider/slick/slick-theme.css",
     // "node_modules/normalize.css/normalize.css",
     "./app/scss/main.scss",
 ]
@@ -48,7 +48,7 @@ function styles() {
     return src(files)
         .pipe(gulpif(env === "dev", sourcemaps.init()))
         .pipe(sassGlob())
-        .pipe(sass( /*{outputStyle: 'compressed'}*/ ).on("error", sass.logError))
+        .pipe(sass( /*{outputStyle: 'compressed'}*/).on("error", sass.logError))
         .pipe(concat("style.min.css"))
         // .pipe(px2rem())
         .pipe(postcss([autoprefixer({
@@ -79,9 +79,11 @@ function copyfonts() {
 }
 //, "!app../images/icons"
 function copyimg() {
+    return src(["./app/images/*"]).pipe(dest("./dist/images/"))
+}
+function copyIcons() {
     return src(["./app/images/icons/*"]).pipe(dest("./dist/images/icons"))
 }
-
 
 const libs = [
     './node_modules/jquery/dist/jquery.js',
@@ -158,7 +160,8 @@ exports.script = script;
 exports.copyfonts = copyfonts;
 exports.copyimg = copyimg;
 exports.imagesWebp = imagesWebp;
+exports.copyIcons = copyIcons;
 
 
-exports.default = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg, /*icon,*/ imagesWebp, parallel(stream, server));
-exports.build = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg /*icon,*/ , imagesWebp);
+exports.default = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg, /*icon,*/copyIcons, imagesWebp, parallel(stream, server));
+exports.build = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg /*icon,*/, copyIcons, imagesWebp);
