@@ -1,4 +1,5 @@
 .block-9 {
+    margin-bottom: 120px;
     &__title {
         text-align: center;
     }
@@ -6,6 +7,7 @@
 
 .block-9__accordion {
     &-title {
+        position: relative;
         padding-bottom: 15px;
         border-bottom: 1px solid #2C1E2F;
         font-family: "PP Pangram Sans";
@@ -13,6 +15,24 @@
         font-weight: 500;
         font-size: 24px;
         line-height: 120%;
+        &::after {
+            content: url("./images/icons/block-9-plus.svg");
+            position: absolute;
+            right: 18px;
+            top: 7px;
+        }
+    }
+    &-item {
+        margin: 0;
+        padding: 0;
+        font-family: 'PP Pangram Sans Compact';
+        font-size: 20px;
+        line-height: 120%;
+        color: #1C131E;
+    }
+    &-items {
+        margin: 0;
+        padding: 0;
     }
 }
 
