@@ -60,17 +60,23 @@ $(document).ready(function() {
         activeIndex: false,
     });
 
-
-    $('.block-3__list-items').on('click', '.block-3__list-item', function() {
-        var lindex = $(this).index();
-        $(".block-3__slider").slick('slickGoTo', parseInt(lindex)); // меняем слад на нужный индекс
-        $('.block-3__list-item').removeClass('block-3__active'); // change class
-        $(this).addClass('block-3__active');
+    $('.block-10__slider-wrap').slick({
+        arrows: false,
+        infinite: true,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
     });
-    $('.block-3__slider').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+
+    $('.block-10__list-items').on('click', '.block-10__list-item', function() {
+        var lindex = $(this).index();
+        $(".block-10__slider-wrap").slick('slickGoTo', parseInt(lindex)); // меняем слад на нужный индекс
+        $('.block-10__list-item').removeClass('block-10__active'); // change class
+        $(this).addClass('block-10__active');
+    });
+    $('.block-10__slider-wrap').on('afterChange', function(event, slick, currentSlide, nextSlide) {
         var slideIndex = $(this).index();
-        $('.block-3__list-item').removeClass('block-3__active');
-        $('.block-3__list-item').eq(currentSlide).addClass('block-3__active')
+        $('.block-10__list-item').removeClass('block-10__active');
+        $('.block-10__list-item').eq(currentSlide).addClass('block-10__active')
     });
 
 });
