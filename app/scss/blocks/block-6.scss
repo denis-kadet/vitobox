@@ -1,4 +1,5 @@
 .block-6 {
+    margin: 120px 0;
     &__item {
         position: relative;
         @extend %block__items;
@@ -8,7 +9,11 @@
     }
     &__img {
         margin-bottom: 100px;
+        max-width: 100%;
         border-radius: 60px;
+        &-slider {
+            margin-bottom: 24px;
+        }
     }
     &__title {
         margin-bottom: 60px;
@@ -75,10 +80,47 @@
         @extend %block__items;
     }
     &-item_text {
+        margin-bottom: 8px;
         font-family: 'PP Pangram Sans';
         font-weight: 500;
+        text-align: center;
     }
     &-item_decr {
+        text-align: center;
         font-size: 18px;
+    }
+    &-item {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 266px !important;
+    }
+}
+
+@media (max-width:1399.99px) {
+    .block-6__inner {
+        &-border {
+            margin-bottom: 100px;
+        }
+    }
+}
+
+@media (max-width:576.99px) {
+    .block-6 {
+        margin: 80px 0;
+        &__text {
+            margin-bottom: 30px;
+        }
+        &__img {
+            margin-bottom: 30px;
+        }
+    }
+    .block-6__inner {
+        &-border {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            padding: 25px;
+        }
     }
 }
