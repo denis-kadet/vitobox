@@ -1,0 +1,72 @@
+.block-7 {
+    &__title {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    &_-img {
+        max-width: 100%;
+    }
+    &__text {
+        margin-bottom: 35px;
+    }
+    &__subtitle {
+        margin-bottom: 20px;
+        font-family: "PP Pangram Sans";
+        font-size: 24px;
+        line-height: 120%;
+    }
+    &__item {
+        position: relative;
+        padding-left: 70px;
+        margin-bottom: 15px;
+        @extend %block__items;
+    }
+    &__items {
+        padding-left: 0;
+    }
+}
+
+.block-7__item {
+    height: 50px;
+    line-height: 51px;
+    &-1::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        top: 0px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: url('./images/icons/block-7-GLUTEN.svg');
+    }
+    &-2::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        top: 0px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: url('./images/icons/block-7-GMO.svg');
+    }
+    &-3::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        top: 0px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: url('./images/icons/block-7-SUGAR.svg');
+    }
+    &-4::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        top: 0px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: url('./images/icons/block-7-fillers.svg');
+    }
+}

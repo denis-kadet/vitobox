@@ -3310,7 +3310,7 @@ body {
 .block__img {
   max-width: 100%; }
 
-.block-5__item, .block-6__item, .block-6__slider-items {
+.block-5__item, .block-6__item, .block-6__slider-items, .block-7__item {
   list-style: none; }
 
 @media (max-width: 576px) {
@@ -3754,3 +3754,67 @@ body {
     margin-top: 30px;
     margin-bottom: 40px;
     padding: 25px; } }
+
+.block-7__title {
+  margin-bottom: 60px;
+  text-align: center; }
+
+.block-7_-img {
+  max-width: 100%; }
+
+.block-7__text {
+  margin-bottom: 35px; }
+
+.block-7__subtitle {
+  margin-bottom: 20px;
+  font-family: "PP Pangram Sans";
+  font-size: 24px;
+  line-height: 120%; }
+
+.block-7__item {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 15px; }
+
+.block-7__items {
+  padding-left: 0; }
+
+.block-7__item {
+  height: 50px;
+  line-height: 51px; }
+  .block-7__item-1::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url("./images/icons/block-7-GLUTEN.svg"); }
+  .block-7__item-2::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url("./images/icons/block-7-GMO.svg"); }
+  .block-7__item-3::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url("./images/icons/block-7-SUGAR.svg"); }
+  .block-7__item-4::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url("./images/icons/block-7-fillers.svg"); }
