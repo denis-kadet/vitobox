@@ -22,6 +22,7 @@ const cleanCSS = require('gulp-clean-css');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
 const gulpif = require('gulp-if');
+const webp = require('gulp-webp');
 
 const env = process.env.NODE_ENV;
 
@@ -38,7 +39,7 @@ const files = [
     './node_modules/bootstrap/dist/css/bootstrap-grid.min.css',
     // './node_modules/accordionjs/accordion.css',
     "./node_modules/slick-slider/slick/slick.css",
-    // "./node_modules/slick-slider/slick/slick-theme.css",
+    "./node_modules/slick-slider/slick/slick-theme.css",
     // "node_modules/normalize.css/normalize.css",
     "./app/scss/main.scss",
 ]
@@ -47,13 +48,13 @@ function styles() {
     return src(files)
         .pipe(gulpif(env === "dev", sourcemaps.init()))
         .pipe(sassGlob())
-        .pipe(sass( /*{outputStyle: 'compressed'}*/ ).on("error", sass.logError))
+        .pipe(sass( /*{outputStyle: 'compressed'}*/).on("error", sass.logError))
         .pipe(concat("style.min.css"))
         // .pipe(px2rem())
         .pipe(postcss([autoprefixer({
             grid: "autoplace"
         })])) //options: https://www.npmjs.com/package/autoprefixer#prefixes
-        .pipe(gulpif(env === "prod", gcmq()))
+        .pipe(gulpif(env === "dev", gcmq()))
         .pipe(gulpif(env === "prod", cleanCSS()))
         .pipe(gulpif(env === "dev", sourcemaps.write()))
         .pipe(dest("./app/css"));
@@ -78,13 +79,15 @@ function copyfonts() {
 }
 //, "!app../images/icons"
 function copyimg() {
-    return src(["./app../images/**/*"]).pipe(dest("./dist../images/"))
+    return src(["./app/images/*"]).pipe(dest("./dist/images/"))
 }
-
+function copyIcons() {
+    return src(["./app/images/icons/*"]).pipe(dest("./dist/images/icons"))
+}
 
 const libs = [
     './node_modules/jquery/dist/jquery.js',
-    './node_modules/jquery-migrate/dist/jquery-migrate.min.js',
+    // './node_modules/jquery-migrate/dist/jquery-migrate.min.js',
     './node_modules/slick-slider/slick/slick.min.js',
     './node_modules/accordionjs/accordion.min.js',
     './app/js/main.js',
@@ -121,11 +124,19 @@ function script() {
 //         .pipe(dest('./dist../images/icons'));
 // }
 
+
+function imagesWebp() {
+    return src('./app/images/*.{jpg,png}')
+        .pipe(webp())
+        .pipe(dest('./dist/images/'));
+}
+
 function stream() {
     watch(["./app/**/*.scss"], series(styles, copycss, copyhtml)).on("change", browserSync.reload);;
     watch(["./app/*.html"], copyhtml).on("change", browserSync.reload);
     watch(['./app/js/*.js'], script).on("change", browserSync.reload);
-    // watch(['./app../images/icons/*.svg'], icon).on("change", browserSync.reload);
+    watch(['./app/images/*'], script).on("change", browserSync.reload);
+    watch(['./app../images/icons/*.svg'], copyimg).on("change", browserSync.reload);
 }
 
 function server() {
@@ -148,7 +159,9 @@ exports.script = script;
 // exports.icon = icon;
 exports.copyfonts = copyfonts;
 exports.copyimg = copyimg;
+exports.imagesWebp = imagesWebp;
+exports.copyIcons = copyIcons;
 
 
-exports.default = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg, /*icon,*/ parallel(stream, server));
-exports.build = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg /*icon,*/ );
+exports.default = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg, /*icon,*/copyIcons, imagesWebp, parallel(stream, server));
+exports.build = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg /*icon,*/, copyIcons, imagesWebp);

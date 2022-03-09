@@ -19,6 +19,7 @@
         "gulp": "^4.0.2",
         "gulp-babel": "^8.0.0",
         "gulp-clean-css": "^4.3.0",
+        "gulp-cli": "^2.3.0",
         "gulp-concat": "^2.6.1",
         "gulp-group-css-media-queries": "^1.2.2",
         "gulp-if": "^3.0.0",
@@ -30,10 +31,12 @@
         "gulp-svg-sprite": "^1.5.0",
         "gulp-svgo": "^2.2.1",
         "gulp-uglify-es": "^3.0.0",
+        "gulp-webp": "^4.0.1",
         "postcss": "^8.3.6",
         "prettier": "2.4.1"
     },
     "dependencies": {
+        "accordionjs": "^2.1.2",
         "bootstrap": "^5.0.2",
         "gulp-sass": "^5.0.0",
         "jquery": "^3.6.0",

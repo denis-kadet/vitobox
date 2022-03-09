@@ -1,0 +1,25 @@
+    .icons__wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    @media (max-width:992px) {
+        .overflow-auto {
+            overflow: auto;
+        }
+        .icons__wrap {
+            width: fit-content;
+        }
+        .icon__wrap {
+            padding: 0 70px;
+        }
+    }
+    
+    @media (max-width:576px) {
+        .icon__wrap {
+            padding: 0 20px;
+        }
+    }

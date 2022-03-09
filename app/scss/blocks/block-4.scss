@@ -1,0 +1,41 @@
+.block-4 {
+    background-color: #4281A4;
+    &__text {
+        color: #fff;
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+    }
+    &__link {
+        color: #fff;
+    }
+}
+
+@media (max-width:767.99px) {
+    .block-4 {
+        &__wrap {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 24px;
+            height: 160px;
+        }
+        &__text {
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width:576.99px) {
+    .block-4 {
+        &__text {
+            max-width: 330px;
+            text-align: center;
+        }
+    }
+}
