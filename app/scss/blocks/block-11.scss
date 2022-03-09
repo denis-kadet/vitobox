@@ -1,0 +1,24 @@
+.block-11 {
+    padding: 120px 0;
+    &__img {
+        max-width: 100%;
+        min-height: 135px;
+        object-fit: none;
+    }
+    &__text {
+        max-width: 330px;
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: 80px;
+        text-align: center;
+    }
+}
+
+.block-11 .col-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}

@@ -3393,6 +3393,27 @@ body {
   justify-content: center;
   align-items: center; }
 
+.block-11 {
+  padding: 120px 0; }
+  .block-11__img {
+    max-width: 100%;
+    min-height: 135px;
+    -o-object-fit: none;
+       object-fit: none; }
+  .block-11__text {
+    max-width: 330px;
+    text-align: center; }
+  .block-11__title {
+    margin-bottom: 80px;
+    text-align: center; }
+
+.block-11 .col-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px; }
+
 .block-2 {
   margin-top: 120px;
   margin-bottom: 80px; }
