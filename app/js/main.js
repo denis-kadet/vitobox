@@ -34,5 +34,30 @@ $(document).ready(function() {
         //     }
         // }, ]
     });
+    $('.block-8__slider-items').slick({
+        //dots: true,
+        infinite: true,
+        centerMode: true,
+        centerPadding: '12%',
+        slidesToShow: 1,
+        speed: 500,
+        responsive: [{
+
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 1
+            }
+
+        }]
+    });
+
+
+
+    $("#block-9__accordion").accordionjs({
+        closeAble: true,
+        closeOther: true,
+        slideSpeed: 150,
+        activeIndex: false,
+    });
 
 });

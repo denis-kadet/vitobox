@@ -1,0 +1,21 @@
+.block-9 {
+    &__title {
+        text-align: center;
+    }
+}
+
+.block-9__accordion {
+    &-title {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #2C1E2F;
+        font-family: "PP Pangram Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+    }
+}
+
+.block-9__accordion li {
+    @extend %block__items;
+}
