@@ -1,0 +1,84 @@
+.block-6 {
+    &__item {
+        position: relative;
+        @extend %block__items;
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+    &__img {
+        margin-bottom: 100px;
+        border-radius: 60px;
+    }
+    &__title {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    &__text {
+        margin-bottom: 40px;
+        font-family: 'PP Pangram Sans';
+        font-weight: 500;
+    }
+    &__items {
+        padding: 0 0 0 60px;
+        margin: 0;
+    }
+}
+
+.block-6__inner {
+    &-border {
+        margin-top: 50px;
+        padding: 25px;
+        max-width: 100%;
+        border: 1px solid #2C1E2F;
+        border-radius: 16px;
+    }
+}
+
+.block-6__item {
+    &-1::before {
+        content: "";
+        position: absolute;
+        left: -59px;
+        top: 7px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: url('./images/icons/block-6-icon-1.svg');
+    }
+    &-2::before {
+        content: "";
+        position: absolute;
+        left: -59px;
+        top: 7px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: url('./images/icons/block-6-icon-2.svg');
+    }
+    &-3::before {
+        content: "";
+        position: absolute;
+        left: -59px;
+        top: 25px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: url('./images/icons/block-6-icon-3.svg');
+    }
+}
+
+.block-6__slider {
+    &-items {
+        padding: 0;
+        margin: 0;
+        @extend %block__items;
+    }
+    &-item_text {
+        font-family: 'PP Pangram Sans';
+        font-weight: 500;
+    }
+    &-item_decr {
+        font-size: 18px;
+    }
+}
