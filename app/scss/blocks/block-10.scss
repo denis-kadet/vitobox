@@ -45,6 +45,7 @@
     }
     &-img {
         margin-bottom: 30px;
+        max-width: 100%;
     }
 }
 
@@ -56,3 +57,43 @@
         align-items: center;
     }
 }
+
+.block-10__accordion {
+    &-title {
+        position: relative;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #F4F4F4;
+        font-family: "PP Pangram Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        color: #F4F4F4;
+        line-height: 120%;
+        &::after {
+            content: url("./images/icons/block-10-plus-white.svg");
+            position: absolute;
+            right: 18px;
+            top: 7px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &-item {
+        margin: 0;
+        padding: 0;
+        font-family: 'PP Pangram Sans Compact';
+        font-size: 20px;
+        line-height: 120%;
+        color: #F4F4F4;
+    }
+    &-items {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.block-10__accordion li {
+    @extend %block__items;
+}
+
+@media (max-width:576.99px) {}

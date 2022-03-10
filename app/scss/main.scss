@@ -50,6 +50,9 @@ body {
 }
 
 @media(max-width:576px) {
+    // .container {
+    //     width: unset;
+    // }
     .block {
         &__title {
             font-size: 22px;

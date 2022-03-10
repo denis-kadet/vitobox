@@ -3311,7 +3311,7 @@ body {
 .block__img {
   max-width: 100%; }
 
-.block-10__list-item, .block-5__item, .block-6__item, .block-6__slider-items, .block-7__item, .block-8__slider-item, .block-9__accordion li {
+.block-10__list-item, .block-10__accordion li, .block-5__item, .block-6__item, .block-6__slider-items, .block-7__item, .block-8__slider-item, .block-9__accordion li {
   list-style: none; }
 
 @media (max-width: 576px) {
@@ -3385,13 +3385,44 @@ body {
   color: #F4F4F4; }
 
 .block-10__list-img {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  max-width: 100%; }
 
 .block-10__slider-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+
+.block-10__accordion-title {
+  position: relative;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #F4F4F4;
+  font-family: "PP Pangram Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: #F4F4F4;
+  line-height: 120%; }
+  .block-10__accordion-title::after {
+    content: url("./images/icons/block-10-plus-white.svg");
+    position: absolute;
+    right: 18px;
+    top: 7px;
+    width: 20px;
+    height: 20px; }
+
+.block-10__accordion-item {
+  margin: 0;
+  padding: 0;
+  font-family: 'PP Pangram Sans Compact';
+  font-size: 20px;
+  line-height: 120%;
+  color: #F4F4F4; }
+
+.block-10__accordion-items {
+  margin: 0;
+  padding: 0; }
 
 .block-11 {
   padding: 120px 0; }

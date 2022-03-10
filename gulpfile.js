@@ -48,7 +48,7 @@ function styles() {
     return src(files)
         .pipe(gulpif(env === "dev", sourcemaps.init()))
         .pipe(sassGlob())
-        .pipe(sass( /*{outputStyle: 'compressed'}*/).on("error", sass.logError))
+        .pipe(sass( /*{outputStyle: 'compressed'}*/ ).on("error", sass.logError))
         .pipe(concat("style.min.css"))
         // .pipe(px2rem())
         .pipe(postcss([autoprefixer({
@@ -81,6 +81,7 @@ function copyfonts() {
 function copyimg() {
     return src(["./app/images/*"]).pipe(dest("./dist/images/"))
 }
+
 function copyIcons() {
     return src(["./app/images/icons/*"]).pipe(dest("./dist/images/icons"))
 }
@@ -163,5 +164,5 @@ exports.imagesWebp = imagesWebp;
 exports.copyIcons = copyIcons;
 
 
-exports.default = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg, /*icon,*/copyIcons, imagesWebp, parallel(stream, server));
-exports.build = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg /*icon,*/, copyIcons, imagesWebp);
+exports.default = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg, /*icon,*/ copyIcons, imagesWebp, parallel(stream, server));
+exports.build = series(clean, copyhtml, script, styles, copycss, copyfonts, copyimg /*icon,*/ , copyIcons, imagesWebp);
