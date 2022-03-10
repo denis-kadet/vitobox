@@ -34,12 +34,15 @@
         &__title {
             margin-bottom: 10px;
         }
+        &__text {
+            font-size: 16px;
+        }
     }
     .block-11 .col-lg-4 {
         margin-bottom: 0;
     }
     .block-11__slider>.slick-dots {
-        bottom: -30px;
+        bottom: -50px;
     }
     .block-11__slider>.slick-dots li button::before {
         position: absolute;
