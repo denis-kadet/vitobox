@@ -79,4 +79,17 @@ $(document).ready(function() {
         $('.block-10__list-item').eq(currentSlide).addClass('block-10__active')
     });
 
+    $(window).on('load resize', function() {
+        if ($(window).width() < 768) {
+            $('.block-11__slider').slick({
+                infinite: true,
+                speed: 100,
+                slidesToShow: 1,
+                dots: true
+            });
+        } else {
+            $(".block-11__slider").slick("unslick");
+        }
+    });
+
 });
