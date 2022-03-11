@@ -19,6 +19,7 @@
     }
     &__img {
         max-width: 100%;
+        width: 470px;
     }
 }
 
@@ -62,6 +63,11 @@
     &-wrap {
         margin-top: 40px;
     }
+    &-inner {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .block-5__img {
@@ -70,42 +76,42 @@
     }
     &-user {
         position: absolute;
-        top: -91px;
-        right: 21px;
+        top: 0;
+        right: 0;
     }
 }
+
 .block-5__imagesnew_dotted {
     margin-top: 80px;
 }
+
 .block-5__imagesnew {
     width: 50px !important;
     height: 50px;
+    border-radius: 50%;
 }
-.block-5__imagesnew_dotted .slick-current {
-    display: none;
+
+.block-5__imagesnew {
+    &-1 {
+        background: url('./images/block-5-user-1.png') center center/contain no-repeat transparent;
+    }
+    &-2 {
+        background: url('./images/block-5-user-2.png');
+    }
+    &-3 {
+        background: url('./images/block-5-user-3.png');
+    }
 }
+
+.block-5__imagesnew_dotted .slick-active:not(:last-child) {
+    margin-right: 30px;
+}
+
 .block-5__imagesnew_dotted .slick-track {
     display: flex;
     justify-content: space-between;
     width: 150px !important;
-    transform: translateX(-250px) !important;
-}
-@media (max-width: 1399.99px) {
-    .block-5__img {
-        &-user {
-            top: -91px;
-            right: -88px;
-        }
-    }
-}
-
-@media (max-width: 1199.99px) {
-    .block-5__img {
-        &-user {
-            top: unset;
-            bottom: -88px;
-        }
-    }
+    // transform: translateX(-250px) !important;
 }
 
 @media (max-width: 991.99px) {
@@ -114,13 +120,18 @@
             margin-top: 30px;
         }
     }
-    .block-5__img {
-        &-user {
-            bottom: -75px;
-            right: -10px;
+    .block-5__slider {
+        &-inner {
+            flex-direction: column;
         }
     }
-    .block-5__imagesnew_dotted{
+    .block-5__img {
+        &-user {
+            bottom: 0px;
+            right: 0px;
+        }
+    }
+    .block-5__imagesnew_dotted {
         display: none !important;
     }
 }
