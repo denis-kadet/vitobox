@@ -35,12 +35,12 @@ function clean() {
 }
 
 const files = [
+    //"node_modules/normalize.css/normalize.css",
     "./app/scss/fonts.scss",
-    './node_modules/bootstrap/dist/css/bootstrap-grid.min.css',
+    './node_modules/bootstrap/dist/css/bootstrap.css',
     // './node_modules/accordionjs/accordion.css',
     "./node_modules/slick-slider/slick/slick.css",
     "./node_modules/slick-slider/slick/slick-theme.css",
-    // "node_modules/normalize.css/normalize.css",
     "./app/scss/main.scss",
 ]
 

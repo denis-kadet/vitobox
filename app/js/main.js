@@ -62,7 +62,6 @@ $(document).ready(function() {
 
     $('.block-10__slider-wrap').slick({
         arrows: false,
-        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
     });
@@ -99,5 +98,7 @@ $(document).ready(function() {
             $(".block-11__slider").slick("unslick");
         }
     });
+
+
 
 });
