@@ -18,22 +18,32 @@ $(document).ready(function() {
         focusOnSelect: true,
     });
 
-
+    //Playing with Ken Wheeler Slick carousel
     $('.block-6__slider-items').slick({
+        //dots: true,
+        infinite: true,
         centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 4,
-        arrows: false,
-        // dots: false,
-        // arrows: true, // включение стрелок (если не нужны false)
-        // asNavFor: '.block-5__imagesnew_dotted', // указываем что навигация для слайдера будет отдельно (указываем класс куда вешаем навигацию),
-        // responsive: [{
-        //     breakpoint: 992,
-        //     settings: {
-        //         dots: true,
-        //     }
-        // }, ]
+        centerPadding: '12%',
+        slidesToShow: 3,
+        speed: 500,
+        responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: '20%',
+                }
+            },
+        ]
     });
+
     $('.block-8__slider-items').slick({
         arrows: false,
         //dots: true,
