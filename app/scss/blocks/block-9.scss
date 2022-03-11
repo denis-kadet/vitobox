@@ -1,11 +1,14 @@
 .block-9 {
     margin-bottom: 120px;
     &__title {
+        margin-bottom: 65px;
         text-align: center;
     }
 }
 
 .block-9__accordion {
+    margin: 0;
+    padding: 0;
     &-title {
         position: relative;
         padding-bottom: 15px;
@@ -16,10 +19,14 @@
         font-size: 24px;
         line-height: 120%;
         &::after {
-            content: url("./images/icons/block-9-plus.svg");
+            content: '';
             position: absolute;
             right: 18px;
             top: 7px;
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url('./images/icons/block-9-plus.svg') center center no-repeat transparent;
         }
     }
     &-item {
@@ -31,11 +38,40 @@
         color: #1C131E;
     }
     &-items {
-        margin: 0;
+        margin: 0 0 25px 0;
         padding: 0;
     }
 }
 
 .block-9__accordion li {
     @extend %block__items;
+}
+
+@media (max-width:767.99px) {
+    .block-9__accordion {
+        &-title {
+            padding-right: 60px;
+        }
+    }
+}
+
+@media (max-width:576.99px) {
+    .block-9 {
+        margin-bottom: 40px;
+        &__title {
+            margin-bottom: 30px;
+        }
+    }
+    .block-9__accordion {
+        &-title {
+            font-size: 16px;
+            &::after {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &-item {
+            font-size: 16px;
+        }
+    }
 }

@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('.block-5__slider-wrap').slick({
         arrows: false,
         dots: false,
-        arrows: true, // включение стрелок (если не нужны false)
+        arrows: false, // включение стрелок (если не нужны false)
         asNavFor: '.block-5__imagesnew_dotted', // указываем что навигация для слайдера будет отдельно (указываем класс куда вешаем навигацию),
         responsive: [{
             breakpoint: 992,
@@ -15,7 +15,7 @@ $(document).ready(function() {
     $('.block-5__imagesnew_dotted').slick({ // настройка навигации
         slidesToShow: 3, // указываем что нужно показывать 3 навигационных изображения
         asNavFor: '.block-5__slider-wrap', // указываем что это навигация для блока выше
-        focusOnSelect: true // указываем что бы слайделось по клику
+        focusOnSelect: true,
     });
 
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
         centerMode: true,
         centerPadding: '60px',
         slidesToShow: 4,
-        // arrows: false,
+        arrows: false,
         // dots: false,
         // arrows: true, // включение стрелок (если не нужны false)
         // asNavFor: '.block-5__imagesnew_dotted', // указываем что навигация для слайдера будет отдельно (указываем класс куда вешаем навигацию),
@@ -35,20 +35,19 @@ $(document).ready(function() {
         // }, ]
     });
     $('.block-8__slider-items').slick({
+        arrows: false,
         //dots: true,
-        infinite: true,
-        centerMode: true,
-        centerPadding: '12%',
-        slidesToShow: 1,
-        speed: 500,
-        responsive: [{
-
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 1
-            }
-
-        }]
+        // infinite: true,
+        // centerMode: true,
+        // centerPadding: '12%',
+        // slidesToShow: 1,
+        // speed: 500,
+        // responsive: [{
+        //     breakpoint: 992,
+        //     settings: {
+        //         slidesToShow: 1,
+        //     }
+        // }]
     });
 
 
@@ -92,7 +91,8 @@ $(document).ready(function() {
                 infinite: true,
                 speed: 100,
                 slidesToShow: 1,
-                dots: true
+                dots: true,
+                arrows: false,
             });
         } else {
             $(".block-11__slider").slick("unslick");
