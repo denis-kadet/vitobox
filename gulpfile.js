@@ -127,7 +127,7 @@ function script() {
 
 
 function imagesWebp() {
-    return src('./app/images/*.{jpg,png}')
+    return src('./app/images/*.{jpg,png,jpeg}')
         .pipe(webp())
         .pipe(dest('./dist/images/'));
 }

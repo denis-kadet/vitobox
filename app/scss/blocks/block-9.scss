@@ -1,8 +1,21 @@
 .block-9 {
+    position: relative;
     margin-bottom: 120px;
     &__title {
         margin-bottom: 65px;
         text-align: center;
+    }
+    &__bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: url("./images/block-9-bg.webp") center center/cover no-repeat transparent;
+        filter: blur(200px);
+        // transform: translateX(-14px);
+        z-index: -1;
     }
 }
 

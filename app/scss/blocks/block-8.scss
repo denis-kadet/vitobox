@@ -7,6 +7,7 @@
     &__text {
         margin-bottom: 40px;
         text-align: center;
+        min-height: 150px;
         &-name {
             margin-bottom: 5px;
             font-family: "PP Pangram Sans";
@@ -16,6 +17,9 @@
     }
     &__img {
         margin-bottom: 20px;
+        max-width: 180px;
+        height: 180px;
+        border-radius: 50%;
     }
 }
 
@@ -44,12 +48,12 @@
     }
 }
 
-.slick-slide {
+.block-8__slider-wrap .slick-initialized .slick-slide {
     transform: scale(1);
     transition: .3s ease-in-out all;
 }
 
-.slick-slide.slick-center {
+.block-8__slider-wrap .slick-initialized .slick-slide.slick-center {
     opacity: 1;
     transform: scale(1.00);
 }
