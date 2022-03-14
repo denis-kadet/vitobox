@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     //Playing with Ken Wheeler Slick carousel
     $('.block-6__slider-items').slick({
-        //dots: true,
+        arrows: false,
         infinite: true,
         centerMode: true,
         centerPadding: '12%',
@@ -31,7 +31,6 @@ $(document).ready(function() {
                 settings: {
                     slidesToShow: 2
                 }
-
             },
             {
                 breakpoint: 576,
@@ -46,18 +45,27 @@ $(document).ready(function() {
 
     $('.block-8__slider-items').slick({
         arrows: false,
-        //dots: true,
-        // infinite: true,
-        // centerMode: true,
-        // centerPadding: '12%',
-        // slidesToShow: 1,
-        // speed: 500,
-        // responsive: [{
-        //     breakpoint: 992,
-        //     settings: {
-        //         slidesToShow: 1,
-        //     }
-        // }]
+        infinite: true,
+        centerMode: true,
+        centerPadding: '30%',
+        slidesToShow: 1,
+        speed: 500,
+        responsive: [{
+                breakpoint: 992,
+                settings: {
+                    centerPadding: '15%',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: '10%',
+                }
+            },
+        ]
     });
 
 

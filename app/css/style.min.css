@@ -8762,6 +8762,7 @@ textarea.form-control-lg {
     text-align: center; } }
 
 .block-5 {
+  position: relative;
   margin-top: 100px;
   margin-bottom: 120px; }
   .block-5__title {
@@ -8855,6 +8856,18 @@ textarea.form-control-lg {
   width: 150px !important;
   transform: translateX(-250px) !important; }
 
+.block-5__desc-backround {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url("./images/block-5-bg.webp") left center/cover no-repeat transparent;
+  filter: blur(200px);
+  transform: translateX(-14px);
+  z-index: -1; }
+
 @media (max-width: 1399.99px) {
   .block-5__img-user {
     right: 0; } }
@@ -8889,6 +8902,8 @@ textarea.form-control-lg {
     display: none !important; } }
 
 @media (max-width: 768.99px) {
+  .block-5__desc-backround {
+    background: none; }
   .block-5__img-user {
     top: auto;
     right: 0;
@@ -9065,10 +9080,14 @@ textarea.form-control-lg {
 .block-7 {
   margin-bottom: 120px; }
   .block-7__title {
+    position: relative;
     margin-bottom: 60px;
-    text-align: center; }
+    text-align: center;
+    z-index: 2; }
   .block-7__img {
-    max-width: 100%; }
+    max-width: 100%;
+    box-shadow: -107px -114px 103px -15px #f5e9c6;
+    border-radius: 60px; }
   .block-7__text {
     margin-bottom: 35px; }
   .block-7__subtitle {
@@ -9150,6 +9169,10 @@ textarea.form-control-lg {
   .block-8__img {
     margin-bottom: 20px; }
 
+.block-8__slider-wrap .slick-initialized .slick-slide {
+  display: flex !important;
+  justify-content: center; }
+
 .block-8__slider-wrap {
   position: relative; }
 
@@ -9183,13 +9206,17 @@ textarea.form-control-lg {
     position: absolute;
     top: 0;
     height: 100%;
-    width: 12%;
+    width: 41%;
     z-index: 100; }
   .block-8__slider-items:after {
     right: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%); }
   .block-8__slider-items:before {
     background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); }
+
+@media (max-width: 992.99px) {
+  .block-8__slider-items:after, .block-8__slider-items:before {
+    content: none; } }
 
 .block-9 {
   margin-bottom: 120px; }
