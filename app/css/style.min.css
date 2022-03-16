@@ -8449,8 +8449,9 @@ textarea.form-control-lg {
   font-size: 24px;
   line-height: 60px;
   color: #F4F4F4;
-  border-bottom: 1px solid #F4F4F4;
   cursor: pointer; }
+  .block-10__list-item:not(:last-child) {
+    border-bottom: 1px solid #F4F4F4; }
 
 .block-10__list-items {
   margin: 0;
@@ -9036,6 +9037,7 @@ textarea.form-control-lg {
   text-align: center; }
 
 .block-6__slider-item_decr {
+  max-width: 270px;
   text-align: center;
   font-size: 18px; }
 
@@ -9093,6 +9095,8 @@ textarea.form-control-lg {
     border-radius: 60px; }
   .block-7__text {
     margin-bottom: 35px; }
+    .block-7__text-decs {
+      max-width: 484px; }
   .block-7__subtitle {
     margin-bottom: 20px;
     font-family: "PP Pangram Sans";

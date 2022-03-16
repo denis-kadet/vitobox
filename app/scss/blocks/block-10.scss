@@ -13,12 +13,14 @@
         @extend %block__items;
         font-family: "PP Pangram Sans";
         font-style: normal;
-        font-weight: normal;
+        font-weight: 300;
         font-size: 24px;
         line-height: 60px;
         color: #F4F4F4;
-        border-bottom: 1px solid #F4F4F4;
         cursor: pointer;
+        &:not(:last-child) {
+            border-bottom: 1px solid #F4F4F4;
+        }
     }
     &-items {
         margin: 0;
