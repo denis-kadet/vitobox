@@ -81,6 +81,10 @@
         position: absolute;
         top: -70px;
         right: -80px;
+        border-radius: 50%;
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
     }
 }
 
@@ -96,13 +100,17 @@
 
 .block-5__imagesnew {
     &-1 {
-        background: url('./images/block-5-user-1.png') center center/contain no-repeat transparent;
+        background: url('./images/block-5-user-alex.jpg') center center/cover no-repeat transparent;
     }
     &-2 {
-        background: url('./images/block-5-user-2.png');
+        background: url('./images/block-5-user-alla.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     &-3 {
-        background: url('./images/block-5-user-3.png');
+        background: url('./images/block-5-user-svet.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
