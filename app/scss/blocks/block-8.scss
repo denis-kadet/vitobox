@@ -8,6 +8,7 @@
         margin-bottom: 40px;
         text-align: center;
         min-height: 150px;
+        max-width: 630px;
         &-name {
             margin-bottom: 5px;
             font-family: "PP Pangram Sans";
@@ -21,6 +22,18 @@
         height: 180px;
         border-radius: 50%;
     }
+}
+
+.block-8__slider-items>.slick-dots li button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: #4281A4;
+    border-radius: 50%;
+    content: '';
+    text-align: center;
 }
 
 .block-8__slider-wrap .slick-initialized .slick-slide {
@@ -39,8 +52,10 @@
         align-items: center;
         float: left;
         padding: 0;
-        max-width: 630px;
+        margin-bottom: 30px;
+        // max-width: 630px;
         @extend %block__items;
+        opacity: 0.3;
     }
     &-items {
         margin: 0;
@@ -60,25 +75,25 @@
 
 .block-8__slider-items {
     margin: 0 auto;
-    position: relative;
-    &:after,
-    &:before {
-        content: "";
-        background: #FAFAFA;
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 41%;
-        z-index: 100;
-        //opacity: .9;
-    }
-    &:after {
-        right: 0;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-    }
-    &:before {
-        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    }
+    // position: relative;
+    // &:after,
+    // &:before {
+    //     content: "";
+    //     background: #FAFAFA;
+    //     position: absolute;
+    //     top: 0;
+    //     height: 100%;
+    //     width: 41%;
+    //     z-index: 100;
+    //     //opacity: .9;
+    // }
+    // &:after {
+    //     right: 0;
+    //     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    // }
+    // &:before {
+    //     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    // }
 }
 
 @media (max-width:992.99px) {

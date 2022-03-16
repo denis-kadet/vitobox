@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+
     $('.block-5__slider-wrap').slick({
         arrows: false,
         dots: false,
@@ -16,6 +18,7 @@ $(document).ready(function() {
         slidesToShow: 3, // указываем что нужно показывать 3 навигационных изображения
         asNavFor: '.block-5__slider-wrap', // указываем что это навигация для блока выше
         focusOnSelect: true,
+        arrows: false,
     });
 
     //Playing with Ken Wheeler Slick carousel
@@ -44,11 +47,13 @@ $(document).ready(function() {
     });
 
     $('.block-8__slider-items').slick({
+        dots: true,
         arrows: false,
         infinite: true,
         centerMode: true,
         centerPadding: '30%',
         slidesToShow: 1,
+        slidesToScroll: 1,
         speed: 500,
         responsive: [{
                 breakpoint: 992,
@@ -103,8 +108,10 @@ $(document).ready(function() {
     });
 
 
-    $(window).on('load resize', function() {
-        if ($(window).width() < 768) {
+    function windowSize() {
+        if ($(window).width() > '768') {
+            $(".block-11__slider").slick("unslick");
+        } else {
             $('.block-11__slider').slick({
                 infinite: true,
                 speed: 100,
@@ -112,11 +119,8 @@ $(document).ready(function() {
                 dots: true,
                 arrows: false,
             });
-        } else {
-            $(".block-11__slider").slick("unslick");
         }
-    });
+    }
 
-
-
+    $(window).on('load resize', windowSize);
 });
