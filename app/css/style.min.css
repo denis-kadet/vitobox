@@ -9044,31 +9044,21 @@ textarea.form-control-lg {
   display: flex !important;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  opacity: 0.3; }
 
 .block-6__slider-wrap {
   margin-top: 60px; }
 
 .block-6__slider-items {
-  margin: 0 auto;
-  position: relative; }
-  .block-6__slider-items:after, .block-6__slider-items:before {
-    content: "";
-    background: #FAFAFA;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 12%;
-    z-index: 100; }
-  .block-6__slider-items:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%); }
-  .block-6__slider-items:before {
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); }
+  margin: 0 auto; }
 
 .block-6__slider-wrap .slick-slide {
   transform: scale(1);
   transition: .3s ease-in-out all; }
+
+.block-6__slider-wrap .slick-slide.slick-active {
+  opacity: 1; }
 
 @media (max-width: 1399.99px) {
   .block-6__inner-border {
@@ -9167,10 +9157,22 @@ textarea.form-control-lg {
       margin-bottom: 30px; } }
 
 .block-8 {
+  position: relative;
   margin-bottom: 170px; }
   .block-8__title {
     margin-bottom: 60px;
     text-align: center; }
+  .block-8__bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url("./images/block-9-bg.webp") center right no-repeat transparent;
+    filter: blur(300px);
+    transform: translate(-14px, 52px);
+    z-index: -1; }
   .block-8__text {
     margin-bottom: 40px;
     text-align: center;
@@ -9211,7 +9213,7 @@ textarea.form-control-lg {
   justify-content: center;
   align-items: center;
   float: left;
-  padding: 0;
+  padding: 0 20px;
   margin-bottom: 30px;
   opacity: 0.3; }
 
@@ -9230,9 +9232,13 @@ textarea.form-control-lg {
 .block-8__slider-items {
   margin: 0 auto; }
 
-@media (max-width: 992.99px) {
-  .block-8__slider-items:after, .block-8__slider-items:before {
-    content: none; } }
+@media (max-width: 567.99px) {
+  .block-8__bg {
+    background: url("./images/block-9-bg.webp") no-repeat transparent;
+    background-size: auto;
+    background-size: contain;
+    transform: translate(80px, 52px);
+    z-index: -1; } }
 
 .block-9 {
   position: relative;
@@ -9240,16 +9246,6 @@ textarea.form-control-lg {
   .block-9__title {
     margin-bottom: 65px;
     text-align: center; }
-  .block-9__bg {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: url("./images/block-9-bg.webp") center center/cover no-repeat transparent;
-    filter: blur(200px);
-    z-index: -1; }
 
 .block-9__accordion {
   margin: 0;
