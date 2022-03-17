@@ -8603,8 +8603,13 @@ textarea.form-control-lg {
     text-align: center; } }
 
 @media (max-width: 576.99px) {
-  .block-11__slider-mobile .slick-slider {
-    padding: 0 20px !important; } }
+  .block-11__text {
+    max-width: 295px; }
+  .block-11__img {
+    -o-object-fit: contain;
+       object-fit: contain; }
+  .block-11 .col-lg-4 {
+    margin: 0 20px 0 20px; } }
 
 .block-2 {
   margin-top: 120px;
