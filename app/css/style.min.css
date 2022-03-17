@@ -8792,8 +8792,9 @@ textarea.form-control-lg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #2c1e2f; }
+    align-items: center; }
+    .block-5__item:not(:last-child) {
+      border-bottom: 1px solid #2c1e2f; }
   .block-5__items {
     margin: 0;
     padding: 0;
@@ -9004,8 +9005,8 @@ textarea.form-control-lg {
     font-family: 'PP Pangram Sans';
     font-weight: 500; }
   .block-6__items {
-    padding: 0 0 0 60px;
-    margin: 50px 15px; }
+    padding: 0 0 0 54px;
+    margin: 50px 0; }
 
 .block-6__inner-border {
   margin-top: 50px;
@@ -9329,6 +9330,28 @@ textarea.form-control-lg {
   width: 25px;
   height: 25px;
   background: url("./images/icons/block-9-minus.svg") center center no-repeat transparent;
+  z-index: -1; }
+
+.block-9__accordion-inner.acc_active:first-child::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 38px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("./images/icons/block-9-minus.svg") center center no-repeat transparent;
+  z-index: -1; }
+
+.block-9__accordion-inner:first-child::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 40px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("./images/icons/block-9-plus.svg") center center no-repeat transparent;
   z-index: -1; }
 
 @media (max-width: 1199.99px) {

@@ -11,7 +11,9 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #2c1e2f;
+        &:not(:last-child) {
+            border-bottom: 1px solid #2c1e2f;
+        }
     }
     &__items {
         margin: 0;

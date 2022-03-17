@@ -95,6 +95,30 @@
     z-index: -1;
 }
 
+.block-9__accordion-inner.acc_active:first-child::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 38px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url('./images/icons/block-9-minus.svg') center center no-repeat transparent;
+    z-index: -1;
+}
+
+.block-9__accordion-inner:first-child::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 40px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url('./images/icons/block-9-plus.svg') center center no-repeat transparent;
+    z-index: -1;
+}
+
 @media (max-width:1199.99px) {
     .block-9__accordion {
         &-title {
