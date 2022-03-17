@@ -7,7 +7,7 @@
     &__picture {
         width: 550px;
         height: 550px;
-        border-radius: 120px;
+        border-radius: 160px;
         box-shadow: 107px -114px 103px -15px rgba(245, 233, 198, 1);
     }
     &__desc-number {
@@ -24,7 +24,7 @@
         margin-top: 80px;
     }
     &__desc-backround {
-        display: none;
+        //display: none;
     }
 }
 
@@ -84,14 +84,17 @@
         &__picture {
             width: 327px;
             height: 327px;
+            border-radius: 60px;
         }
         &__title {
             max-width: 330px;
             text-align: center;
+            font-weight: 600;
         }
         &__text {
             max-width: 330px;
             text-align: center;
+            font-weight: 300;
         }
         &__desc-wrap {
             display: flex;
@@ -111,10 +114,10 @@
             bottom: 0;
             right: 0;
             left: 0;
-            //background: url('./images/block-1-mob-motion.png') left center/cover no-repeat transparent;
-            background: url('./images/block-1-mob-motion.webp') left center/cover no-repeat transparent;
+            background: url('./images/block-1-mob-motion.png') left center/cover no-repeat transparent;
+            // background: url('./images/block-1-mob-motion.webp') left center/cover no-repeat transparent;
             filter: blur(200px);
-            transform: translateX(-14px);
+            //transform: translateX(-14px);
             z-index: -1;
         }
     }
@@ -127,6 +130,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            z-index: 2;
         }
         &__count {
             font-size: 28px;

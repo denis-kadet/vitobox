@@ -67,7 +67,7 @@ $(document).ready(function() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    centerPadding: '10%',
+                    centerPadding: '0%',
                 }
             },
         ]
@@ -110,11 +110,13 @@ $(document).ready(function() {
 
 
     $('.block-11__slider-mobile').slick({
-        infinite: true,
-        speed: 100,
-        slidesToShow: 1,
-        dots: true,
+        dots: false,
         arrows: false,
+        infinite: true,
+        centerMode: true,
+        centerPadding: '15%',
+        slidesToShow: 1,
+        speed: 500,
     });
 
 });

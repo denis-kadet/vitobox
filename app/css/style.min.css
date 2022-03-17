@@ -8602,6 +8602,10 @@ textarea.form-control-lg {
     content: '';
     text-align: center; } }
 
+@media (max-width: 576.99px) {
+  .block-11__slider-mobile .slick-slider {
+    padding: 0 20px !important; } }
+
 .block-2 {
   margin-top: 120px;
   margin-bottom: 80px; }
@@ -8610,7 +8614,7 @@ textarea.form-control-lg {
   .block-2__picture {
     width: 550px;
     height: 550px;
-    border-radius: 120px;
+    border-radius: 160px;
     box-shadow: 107px -114px 103px -15px #f5e9c6; }
   .block-2__desc-number {
     display: flex;
@@ -8622,8 +8626,6 @@ textarea.form-control-lg {
     text-align: center; }
   .block-2__wrap {
     margin-top: 80px; }
-  .block-2__desc-backround {
-    display: none; }
 
 .desc-number__count {
   margin: 10px 0;
@@ -8665,13 +8667,16 @@ textarea.form-control-lg {
 @media (max-width: 576px) {
   .block-2__picture {
     width: 327px;
-    height: 327px; }
+    height: 327px;
+    border-radius: 60px; }
   .block-2__title {
     max-width: 330px;
-    text-align: center; }
+    text-align: center;
+    font-weight: 600; }
   .block-2__text {
     max-width: 330px;
-    text-align: center; }
+    text-align: center;
+    font-weight: 300; }
   .block-2__desc-wrap {
     display: flex;
     flex-direction: column;
@@ -8686,9 +8691,8 @@ textarea.form-control-lg {
     bottom: 0;
     right: 0;
     left: 0;
-    background: url("./images/block-1-mob-motion.webp") left center/cover no-repeat transparent;
+    background: url("./images/block-1-mob-motion.png") left center/cover no-repeat transparent;
     filter: blur(200px);
-    transform: translateX(-14px);
     z-index: -1; }
   .text-center {
     text-align: center; }
@@ -8696,7 +8700,8 @@ textarea.form-control-lg {
     position: relative;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    z-index: 2; }
   .desc-number__count {
     font-size: 28px; } }
 
@@ -8755,6 +8760,15 @@ textarea.form-control-lg {
     .block-3__wrap-arrow {
       margin-bottom: 50px; } }
 
+@media (max-width: 576.99px) {
+  .block-3 {
+    margin-bottom: 80px; }
+    .block-3__text {
+      font-size: 20px; }
+    .block-3__text-small {
+      font-size: 16px;
+      font-weight: 300; } }
+
 .block-4 {
   background-color: #4281A4; }
   .block-4__text {
@@ -8780,7 +8794,8 @@ textarea.form-control-lg {
 @media (max-width: 576.99px) {
   .block-4__text {
     max-width: 330px;
-    text-align: center; } }
+    text-align: center;
+    font-weight: 600; } }
 
 .block-5 {
   position: relative;
@@ -8800,7 +8815,10 @@ textarea.form-control-lg {
     padding: 0;
     max-width: 330px; }
   .block-5__img {
+    border-radius: 60px;
     max-width: 100%; }
+    .block-5__img-mobile {
+      display: none !important; }
 
 .block-5__text-1 {
   font-weight: bold; }
@@ -8947,14 +8965,17 @@ textarea.form-control-lg {
     margin-top: 80px;
     margin-bottom: 80px; }
     .block-5__img {
-      max-width: 330px;
-      height: 330px; }
+      display: none !important; }
+      .block-5__img-mobile {
+        display: block !important;
+        max-width: 330px;
+        height: 330px; }
     .block-5__items {
       max-width: 330px; }
   .block-5__text-wrap {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center; }
   .block-5__text-1 {
     margin-top: 30px;
@@ -8967,7 +8988,7 @@ textarea.form-control-lg {
     max-width: 330px;
     font-size: 16px; }
   .block-5__img-user {
-    bottom: -24px;
+    bottom: -45px;
     top: auto;
     right: 0;
     width: 140px;
@@ -8977,12 +8998,15 @@ textarea.form-control-lg {
     text-align: center; }
   .block-5__slider-wrap {
     margin-top: 30px; }
+  .block-5__slider-inner {
+    padding-top: 0; }
   .block-5__item {
+    margin: 0;
     width: 330px; }
     .block-5__item-1 {
       font-size: 16px; }
     .block-5__item-2 {
-      max-width: 140px;
+      max-width: 150px;
       font-size: 16px; } }
 
 .block-6 {
@@ -9256,11 +9280,13 @@ textarea.form-control-lg {
   margin: 0 auto; }
 
 @media (max-width: 567.99px) {
-  .block-8__bg {
-    background: url("./images/block-9-bg.webp") no-repeat transparent;
-    background-size: auto;
-    background-size: contain;
-    z-index: -1; } }
+  .block-8 {
+    margin-bottom: 80px; }
+    .block-8__bg {
+      background: url("./images/block-9-bg.webp") no-repeat transparent;
+      background-size: auto;
+      background-size: contain;
+      z-index: -1; } }
 
 .block-9 {
   position: relative;

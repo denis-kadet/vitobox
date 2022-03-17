@@ -68,3 +68,9 @@
         text-align: center;
     }
 }
+
+@media (max-width:576.99px) {
+    .block-11__slider-mobile .slick-slider {
+        padding: 0 20px !important;
+    }
+}
