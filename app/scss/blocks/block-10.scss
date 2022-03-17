@@ -100,6 +100,16 @@
     }
 }
 
+.block-10__accordion .acc_active .block-10__accordion-title::after {
+    content: '';
+    position: absolute;
+    right: 18px;
+    top: 7px;
+    width: 20px;
+    height: 20px;
+    background: url('./images/icons/block-9-minus.svg') center center no-repeat transparent;
+}
+
 .block-10__accordion li {
     @extend %block__items;
 }

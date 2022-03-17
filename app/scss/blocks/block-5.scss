@@ -96,6 +96,7 @@
     width: 50px !important;
     height: 50px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .block-5__imagesnew {
@@ -189,6 +190,7 @@
     .block-5__img {
         &-user {
             width: 180px;
+            height: 180px;
             top: -70px;
             right: -80px;
         }

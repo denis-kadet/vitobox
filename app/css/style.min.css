@@ -8521,6 +8521,15 @@ textarea.form-control-lg {
     margin: 0 0 25px 0;
     padding: 0; }
 
+.block-10__accordion .acc_active .block-10__accordion-title::after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+  background: url("./images/icons/block-9-minus.svg") center center no-repeat transparent; }
+
 @media (max-width: 767.99px) {
   .block-10__accordion-title {
     padding-right: 60px; } }
@@ -8557,6 +8566,9 @@ textarea.form-control-lg {
     margin-bottom: 80px;
     text-align: center; }
 
+.block-11__slider-mobile {
+  display: none; }
+
 .block-11 .col-lg-4 {
   display: flex !important;
   flex-direction: column;
@@ -8565,6 +8577,10 @@ textarea.form-control-lg {
   margin-bottom: 80px; }
 
 @media (max-width: 767.99px) {
+  .block-11__slider {
+    display: none; }
+    .block-11__slider-mobile {
+      display: block; }
   .block-11 {
     padding: 80px 0 120px 0; }
     .block-11__title {
@@ -8573,9 +8589,9 @@ textarea.form-control-lg {
       font-size: 16px; }
   .block-11 .col-lg-4 {
     margin-bottom: 0; }
-  .block-11__slider > .slick-dots {
+  .block-11__slider-mobile > .slick-dots {
     bottom: -50px; }
-  .block-11__slider > .slick-dots li button::before {
+  .block-11__slider-mobile > .slick-dots li button::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -8843,7 +8859,8 @@ textarea.form-control-lg {
 .block-5__imagesnew {
   width: 50px !important;
   height: 50px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  cursor: pointer; }
 
 .block-5__imagesnew-1 {
   background: url("./images/block-5-user-alex.jpg") center center/cover no-repeat transparent; }
@@ -8910,6 +8927,7 @@ textarea.form-control-lg {
     align-items: center; }
   .block-5__img-user {
     width: 180px;
+    height: 180px;
     top: -70px;
     right: -80px; }
   .block-5__imagesnew_dotted {
@@ -9241,7 +9259,6 @@ textarea.form-control-lg {
     background: url("./images/block-9-bg.webp") no-repeat transparent;
     background-size: auto;
     background-size: contain;
-    transform: translate(80px, 52px);
     z-index: -1; } }
 
 .block-9 {
@@ -9256,13 +9273,15 @@ textarea.form-control-lg {
   padding: 0; }
   .block-9__accordion-title {
     margin: 0;
-    max-width: 620px;
     font-family: "PP Pangram Sans";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 120%;
     cursor: pointer; }
+    .block-9__accordion-title span {
+      display: block;
+      max-width: 620px; }
   .block-9__accordion-item {
     margin: 0;
     padding: 25px 0 0 0;
@@ -9288,7 +9307,34 @@ textarea.form-control-lg {
     display: block;
     width: 25px;
     height: 25px;
-    background: url("./images/icons/block-9-plus.svg") center center no-repeat transparent; }
+    background: url("./images/icons/block-9-plus.svg") center center no-repeat transparent;
+    z-index: -1; }
+  .block-9__accordion-inner .acc_active::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 25px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("./images/icons/block-9-plus.svg") center center no-repeat transparent;
+    z-index: -1; }
+
+.block-9__accordion-inner.acc_active::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 25px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("./images/icons/block-9-minus.svg") center center no-repeat transparent;
+  z-index: -1; }
+
+@media (max-width: 1199.99px) {
+  .block-9__accordion-title span {
+    display: block;
+    max-width: 495px; } }
 
 @media (max-width: 767.99px) {
   .block-9__accordion-title {

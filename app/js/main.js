@@ -78,7 +78,7 @@ $(document).ready(function() {
     $("#block-9__accordion").accordionjs({
         closeAble: true,
         closeOther: true,
-        slideSpeed: 150,
+        slideSpeed: 550,
         activeIndex: false,
     });
 
@@ -103,24 +103,18 @@ $(document).ready(function() {
     $("#block-10__accordion").accordionjs({
         closeAble: true,
         closeOther: true,
-        slideSpeed: 150,
+        slideSpeed: 550,
         activeIndex: false,
     });
 
 
-    function windowSize() {
-        if ($(window).width() > '768') {
-            $(".block-11__slider").slick("unslick");
-        } else {
-            $('.block-11__slider').slick({
-                infinite: true,
-                speed: 100,
-                slidesToShow: 1,
-                dots: true,
-                arrows: false,
-            });
-        }
-    }
 
-    $(window).on('load resize', windowSize);
+    $('.block-11__slider-mobile').slick({
+        infinite: true,
+        speed: 100,
+        slidesToShow: 1,
+        dots: true,
+        arrows: false,
+    });
+
 });
