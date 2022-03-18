@@ -117,6 +117,7 @@
             background: url('./images/block-1-mob-motion.png') left center/cover no-repeat transparent;
             // background: url('./images/block-1-mob-motion.webp') left center/cover no-repeat transparent;
             filter: blur(200px);
+            -webkit-filter: blur(50px);
             //transform: translateX(-14px);
             z-index: -1;
         }
